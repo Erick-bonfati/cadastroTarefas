@@ -1,0 +1,169 @@
+@import url("header.css");
+@import url("editarTarefa.css");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+  --fonte-principal: "Poppins", sans-serif;
+  --fonte-secundaria: "Montserrat", sans-serif;
+  --background-principal: rgb(159, 159, 230);
+  --white: #ffffff;
+  --background-escuro:
+  
+}
+
+body {
+  box-sizing: border-box;
+}
+
+.main__section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5%;
+  gap: 100px
+}
+
+.adicionar__tarefas {
+  border: 2px solid black;
+  padding: 30px;
+  border-radius: 10px;
+  background-color: var(--background-principal);
+}
+
+.grupo__tarefas {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.criar__tarefa {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.text__context {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 700;
+  font-family: var(--fonte-principal);
+  margin-bottom: 20px;
+}
+
+.label__titles {
+  font-size: 22px;
+  font-weight: 400;
+  font-family: var(--fonte-secundaria);
+
+}
+
+.input__criar__tarefas {
+  border-radius: 4px;
+  border: 2px solid black;
+  padding: 6px;
+  font-size: 18px;
+}
+
+.select__criar__tarefa {
+  font-size: 18px;
+  border-radius: 7px;
+  border: 2px solid black;
+  padding: 6px;
+  background-color: var(--white);
+}
+
+.visualizar__tarefas {
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 30px;
+  background-color: var(--background-principal);
+}
+
+.botao__add__tarefa {
+  align-items: center;
+  margin-top: 20px;
+
+  padding: 10px;
+  border-radius: 7px;
+  
+  border: 2px solid black;
+  color: black;
+  background-color: var(--white);
+  
+  font-family: var(--fonte-principal);
+  font-weight: 700;
+  font-size: 18px;
+  width: 100%;
+  transition: 1s;
+  cursor: pointer;
+}
+
+.botao__add__tarefa:hover {
+  border: 2px solid white;
+  background-color: rgb(40, 40, 151);
+  color: white;
+}
+
+.lista__tarefas {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.lista__tarefas__adicionadas {
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+  font-family: var(--fonte-secundaria);
+  background-color: var(--white);
+}
+
+.div__tarefas__atuais {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+strong {
+  font-weight: 700;
+}
+
+.div__link__tarefas {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+  gap: 10px;
+}
+
+.link__editar__tarefas {
+  text-decoration: none;
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 10px;
+  color: black;
+  transition: 1s;
+}
+.link__editar__tarefas:hover {
+  background-color: var(--background-principal);
+  color: var(--white);
+}
+
+.link__excluir__tarefas {
+  text-decoration: none;
+  
+  border-radius: 5px;
+  padding: 10px;
+  transition: 1s;
+  border: 2px solid red;
+  color: red;
+}
+.link__excluir__tarefas:hover {
+  border: 2px solid red;
+  color: black;
+  background-color: red;
+}

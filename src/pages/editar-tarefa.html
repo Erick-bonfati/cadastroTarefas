@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+  <title>Minhas tarefas</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  
+  <header class="header__main">
+    <h1 class="title__header" onclick="window.location.href='../../index.html'">Minhas tarefas</h1>
+    <ul class="lista__header__links">
+      <li class="link__uteis"><a href="https://pomofocus.io/" class="link__uteis__link" target="_blank">Pomedoro Timer</a></li>
+      <li class="link__uteis"><a href="https://roadmap.sh/javascript" class="link__uteis__link" target="_blank">RoadMap</a></li>
+    </ul>
+  </header>
+
+  <section class="main__section__editar">
+
+    <form class="adicionar__tarefas">
+      <h2 class="text__context">Edite sua tarefa aqui:</h2>
+      <ul class="grupo__tarefas">
+        <li class="criar__tarefa">
+          <label class="label__titles">Nome tarefa:</label>
+          <input type="text" class="input__criar__tarefas nome">
+        </li>
+        <li class="criar__tarefa">
+          <label class="label__titles">Horas dedicadas:</label>
+          <input type="text" class="input__criar__tarefas horas">
+        </li>
+        <li class="criar__tarefa">
+          <label class="label__titles">Prioridade</label>
+          <select class="select__criar__tarefa" id="seletor__prioridade">
+            <option value="" class="select__options__tarefas" disabled selected></option>
+            <option value="Alta" class="select__options__tarefas">Alta</option>
+            <option value="Média" class="select__options__tarefas">Média</option>
+            <option value="Baixa" class="select__options__tarefas">Baixa</option>
+          </select>
+        </li>
+      </ul>
+
+      <button class="botao__add__tarefa" type="submit">Editar Tarefa</button>
+    </form>
+  </section>
+
+  <script src="./src/js/conexaoApi/criarTarefa.js" type="module"></script>
+  <script src="./src/js/conexaoApi/mostrarTarefas.js" type="module"></script>
+</body>
+</html>

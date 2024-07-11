@@ -1,4 +1,4 @@
-Neste projeto, vamos criar uma lista de tarefas, com a possibilidade de adicionar uma nova tarefa, excluir e talvez edita-lá
+Neste projeto, vamos criar uma lista de tarefas, com a possibilidade de adicionar uma nova tarefa, excluir e  edita-lá
 
 Com todas essas novas tarefas que vamos criar, vamos criar um json para armazenar as tarefas que estão pendentes
 

@@ -8,17 +8,15 @@
   <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-  
   <header class="header__main">
     <h1 class="title__header" onclick="window.location.href='../../index.html'">Minhas tarefas</h1>
     <ul class="lista__header__links">
-      <li class="link__uteis"><a href="https://pomofocus.io/" class="link__uteis__link" target="_blank">Pomedoro Timer</a></li>
+      <li class="link__uteis"><a href="https://pomofocus.io/" class="link__uteis__link" target="_blank">Pomodoro Timer</a></li>
       <li class="link__uteis"><a href="https://roadmap.sh/javascript" class="link__uteis__link" target="_blank">RoadMap</a></li>
     </ul>
   </header>
 
   <section class="main__section__editar">
-
     <form class="adicionar__tarefas">
       <h2 class="text__context">Edite sua tarefa aqui:</h2>
       <ul class="grupo__tarefas">
@@ -28,7 +26,7 @@
         </li>
         <li class="criar__tarefa">
           <label class="label__titles">Horas dedicadas:</label>
-          <input type="text" class="input__criar__tarefas horas">
+          <input type="number" class="input__criar__tarefas horas">
         </li>
         <li class="criar__tarefa">
           <label class="label__titles">Prioridade</label>
@@ -41,11 +39,12 @@
         </li>
       </ul>
 
+      <p class="erro__criar__tarefas">Preencha todos os campos para prosseguir*</p>
+
       <button class="botao__add__tarefa" type="submit">Editar Tarefa</button>
     </form>
   </section>
 
-  <script src="./src/js/conexaoApi/criarTarefa.js" type="module"></script>
-  <script src="./src/js/conexaoApi/mostrarTarefas.js" type="module"></script>
+  <script src="../js/conexaoApi/editarTarefa.js" type="module"></script>
 </body>
 </html>

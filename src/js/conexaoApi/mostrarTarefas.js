@@ -17,7 +17,7 @@ export default function listaDeTarefas(id, nome, horas, prioridade) {
   
   <div class="div__link__tarefas">
   <a href="#" class="link__excluir__tarefas" data-id="${id}">Excluir</a>
-  <a href="/src/pages/editar-tarefa.html" class="link__editar__tarefas">Editar</a>
+  <a href="/src/pages/editar-tarefa.html?id=${id}" class="link__editar__tarefas" data-id="${id}">Editar</a>
   </div>
   
   `
@@ -26,7 +26,6 @@ export default function listaDeTarefas(id, nome, horas, prioridade) {
   e.preventDefault();
   const tarefaId = e.target.getAttribute("data-id");
   await conectarApi.excluirTarefa(tarefaId);
-  e.preventDefault()
   tarefa.remove();
   });
 

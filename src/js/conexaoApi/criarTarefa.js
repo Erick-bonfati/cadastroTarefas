@@ -1,5 +1,7 @@
 import { conectarApi } from "./conectarApi.js"
 
+const erroCriarTarefa = document.querySelector(".erro__criar__tarefas");
+
 const nomeInput = document.querySelector(".nome")
 const horasDedicadasInput = document.querySelector(".horas")
 const form = document.querySelector(".adicionar__tarefas");
@@ -17,9 +19,11 @@ async function criarNovaTarefa(e) {
   const prioridade = prioridadeSelect.value;
 
   try {
-    await conectarApi.criarTarefa(nome, horasDedicadas, prioridade);
-
-    console.log(nome)
+    if(nome === '' || horasDedicadas === '' || prioridade === '') {
+      erroCriarTarefa.style.display = "block"
+    } else {
+      await conectarApi.criarTarefa(nome, horasDedicadas, prioridade);
+    }
   } catch(error) {
     console.log(error)
   }

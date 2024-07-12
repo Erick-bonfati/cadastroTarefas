@@ -3,7 +3,7 @@
   justify-content: space-between;
   background-color: var(--background-principal);
   width: 100%;
-  padding: 20px;
+  padding: 30px;
   box-sizing: border-box;
 }
 
@@ -49,4 +49,18 @@
   border: 2px solid black;
   background-color: white;
   color: black;
+}
+
+@media screen and (max-width: 664px) {
+  .header__main {
+    display: flex;
+    justify-content: center;
+    background-color: var(--background-principal);
+    box-sizing: border-box;
+  }
+
+  .lista__header__links {
+    display: none;
+  }
+
 }

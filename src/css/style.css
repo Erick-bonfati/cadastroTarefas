@@ -7,12 +7,13 @@
   --fonte-secundaria: "Montserrat", sans-serif;
   --background-principal: rgb(159, 159, 230);
   --white: #ffffff;
-  --background-escuro:
+  --background-escuro: #FEFBD8;
   
 }
 
 body {
   box-sizing: border-box;
+  background-color: var(--background-escuro);
 }
 
 .main__section {
@@ -21,6 +22,7 @@ body {
   justify-content: center;
   align-items: center;
   margin-top: 5%;
+  margin-bottom: 5%;
   gap: 100px
 }
 
@@ -83,14 +85,11 @@ body {
 .botao__add__tarefa {
   align-items: center;
   margin-top: 20px;
-
   padding: 10px;
   border-radius: 7px;
-  
   border: 2px solid black;
   color: black;
   background-color: var(--white);
-  
   font-family: var(--fonte-principal);
   font-weight: 700;
   font-size: 18px;
@@ -166,4 +165,60 @@ strong {
   border: 2px solid red;
   color: black;
   background-color: red;
+}
+
+.erro__criar__tarefas {
+  display: none;
+  color: red;
+  margin-top: 20px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+
+@media screen and (max-width: 664px) {
+  .main__section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  gap: 100px
+  }
+
+  .adicionar__tarefas {
+    border: 2px solid black;
+    padding: 30px;
+    border-radius: 10px;
+    background-color: var(--background-principal);
+    width: 80%;
+  }
+
+  .visualizar__tarefas {
+    width: 80%;
+  }
+
+  .lista__tarefas__adicionadas {
+    padding: 30px;
+  }
+
+  .div__link__tarefas {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+
+@media screen and (max-width: 451px) {
+
+  .lista__tarefas__adicionadas {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .div__link__tarefas {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+  }
 }

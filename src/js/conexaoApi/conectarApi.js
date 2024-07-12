@@ -40,12 +40,29 @@ async function excluirTarefa(id) {
   } catch(err) {
     console.log(err)
   }
-  
 }
 
+async function atualizarTarefa(id, nome, horas, prioridade) {
+  try {
+    const conexao = await fetch(`http://localhost:3000/tarefas/${id}`, {
+      method: "PUT",
+      headers: {
+        "Content-type": "application/json"
+      },
+      body: JSON.stringify({nome, horas, prioridade})
+    })
+
+    if(!conexao.ok) {
+      throw new Error(`Erro ao atualizar ID: ${id}`)
+    }
+  } catch(err) {
+    console.log(err)
+  }
+}
 
 export const conectarApi = {
   listarTarefas,
   criarTarefa,
-  excluirTarefa
+  excluirTarefa,
+  atualizarTarefa
 }
